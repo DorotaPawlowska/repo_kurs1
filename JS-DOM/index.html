@@ -84,12 +84,12 @@ czarny
         <input type="radio" value="k" name="gender" /> k
     </fieldset>
 
-    <fieldset>
-        <legend>Wybierz dwa (2) ulubione owoce</legend>
-        <input type="checkbox" value="jagoda" name="color" /> niebieski
-        <input type="checkbox" value="jablko" name="color" /> czerwony
-        <input type="checkbox" value="arbuz" name="color" /> zielony
-        <input type="checkbox" value="pomarancz" name="color" /> pomarańcz
+    <fieldset >
+        <legend >Wybierz dwa (2) ulubione owoce</legend>
+        <input type="checkbox" id="someCheckbox1" value="jagoda" name="color" checked/> niebieski
+        <input type="checkbox" id="someCheckbox2" value="jablko" name="color" /> czerwony
+        <input type="checkbox" id="someCheckbox3" value="arbuz" name="color" /> zielony
+        <input type="checkbox" id="someCheckbox4" value="pomarancz" name="color" /> pomarańcz
     </fieldset>
 
     <div>
@@ -109,9 +109,49 @@ czarny
 
 
 <script>
-//    console.log('Pola radio:');
-//    console.dir(document.querySelectorAll('#radioTestCnt input[name="radioTest"]'));
 
+document.addEventListener('DOMContentLoaded', function () {
+
+    var chek1 = document.querySelector('#someCheckbox1')
+
+    chek1.addEventListener('click',function () {
+
+        if (chek1.checked) {
+            alert("zaznaczony!");
+        }
+    });
+
+    var chek2 = document.querySelector('#someCheckbox2')
+
+    chek2.addEventListener('click',function () {
+
+        if (chek2.checked) {
+            alert("zaznaczony!");
+        }
+    });
+
+    var chek3 = document.querySelector('#someCheckbox3')
+
+    chek3.addEventListener('click',function () {
+
+        if (chek3.checked) {
+            alert("zaznaczony!");
+        }
+    });
+
+    var chek4 = document.querySelector('#someCheckbox4')
+
+    chek4.addEventListener('click',function () {
+
+        if (chek4.checked) {
+            alert("zaznaczony!");
+        }
+    });
+
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
 
     var down2 = document.querySelector('#jeden');
     var down1 = document.querySelector('#dwa');
@@ -127,6 +167,8 @@ czarny
         console.log(down2.value);
 
     });
+});
+
 
     console.log('text');
     console.dir(document.querySelector('#inputText'));
