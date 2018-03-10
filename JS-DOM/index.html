@@ -97,9 +97,36 @@ czarny
     </div>
 </form>
 
+<form>
+    <p id="radioTestCnt">
+        <input id="jeden" type="radio" value="tak" name="radioTest" /> tak
+        <input id="dwa" type="radio" value="nie" name="radioTest" /> nie
+    </p>
+</form>
+
+
+
 
 
 <script>
+//    console.log('Pola radio:');
+//    console.dir(document.querySelectorAll('#radioTestCnt input[name="radioTest"]'));
+
+
+    var down2 = document.querySelector('#jeden');
+    var down1 = document.querySelector('#dwa');
+
+    down1.addEventListener('click', function () {
+
+        console.log(down1.value);
+
+    });
+
+    down2.addEventListener('click', function () {
+
+        console.log(down2.value);
+
+    });
 
     console.log('text');
     console.dir(document.querySelector('#inputText'));
