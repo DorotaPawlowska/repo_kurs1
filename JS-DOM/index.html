@@ -23,17 +23,60 @@
     </tr>
 </table>
 
+<h1 class="HH1">zmiana koloru tekstu </h1>
+
+<p class="PP1">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    A adipisci asperiores, commodi error, ex laboriosam magni maiores nulla,
+    perferendis quos rem tempore! Asperiores at eos iste molestias possimus ullam voluptates?</p>
+
 <button class="button">
-jakiś tekst
+cZARNY
+</button>
+
+<button class="btn">
+niebieski
 </button>
 
 <script>
 
-const btn = document.querySelector('.button');
-console.dir(btn);
+/*
+    var btn = document.querySelector('.btn');
+    console.log(btn.tagName);
+    */
 
 
 
+    var btn = document.querySelector(".button");
+
+    btn.addEventListener("click", function() {
+
+        var pp1 = document.querySelector(".PP1");
+        var hh1 = document.querySelector(".HH1");
+
+        hh1.style.color = 'black';
+        pp1.style.color = 'black';
+
+    });
+
+    var btn2 = document.querySelector(".btn");
+
+
+btn2.addEventListener("click", function() {
+
+    var pp1 = document.querySelector(".PP1");
+    var hh1 = document.querySelector(".HH1");
+
+    hh1.style.color = 'blue';
+    pp1.style.color = 'blue';
+});
+
+/*
+const btn = document.querySelector('.btn');
+btn.innerHTML = "<span>nie klikaj mnie!</span>"
+//console.dir(btn);
+
+
+/*
 
     document.addEventListener('DOMContentLoaded', function () {
 
@@ -49,8 +92,8 @@ console.dir(btn);
 //        var btn = document.getElementById('btn');
 //        console.log(btn.innerText);
 
-
-    });
+    })
+    */
 </script>
 
 </body>
