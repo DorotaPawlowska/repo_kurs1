@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<main>
+    <div class="imie">
+        Dorota
+    </div>
+
+    <div class="nazwisko">
+        Kowalska
+    </div>
+
+    <div class="wyksztalcenie">
+        średnie
+    </div>
+
+    <div class="adres">
+        Koralowa 12
+    </div>
+
+    <div class="doswiadczenie">
+        4 lat pracy na podobnym stanowisku
+    </div>
+
+    <div class="umiejetnosci">
+        obsługa komputera
+    </div>
+
+    <div class="tytul">
+        mgr
+    </div>
+
+    <button class="listON"> stórz list </button>
+
+    <div class="wynikowyList">list</div>
+
+</main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+
+        var imie = document.getElementsByClassName('imie')[0].innerText;
+  /*
+        var nazwisko = document.querySelector('.nazwisko').innerHTML;
+        var wyk = document.querySelector('.wyksztalcenie').innerHTML;
+        var adr = document.querySelector('.adres').innerHTML;
+        var dosw = document.querySelector('.doswiadczenie').innerHTML;
+        var umie = document.querySelector('.umiejetnosci').innerHTML;
+        var tyt = document.querySelector('.tytul').innerHTML;
+*/
+console.log(imie);
+
+        var klik = document.getElementsByClassName('listON')[0];
+        var list = document.getElementsByClassName('wynikowylist')[0];
+
+        list.innerText = imie;
+
+        //klik.addEventListener('click', function () {
+
+           // alert(imie);
+
+       // });
+
+    });
+
+
+</script>
+
+</body>
+</html>
