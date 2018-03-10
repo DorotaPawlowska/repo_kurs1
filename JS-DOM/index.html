@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
+    <style>
+
+        .niebieska{
+            color: darkblue;
+            background: cornflowerblue;
+            font-family: "Abyssinica SIL";
+            font-style: italic;
+        }
+
+        .czarna{
+            background: grey;
+            font-family: "DejaVu Sans";
+            font-style: italic;
+        }
+    </style>
+
 </head>
 <body>
 <button type="button" id="btn">
@@ -30,35 +46,56 @@
     perferendis quos rem tempore! Asperiores at eos iste molestias possimus ullam voluptates?</p>
 
 <button class="button">
-cZARNY
-</button>
-
-<button class="btn">
 niebieski
 </button>
 
+<button class="btn">
+czarny
+</button>
+
+
+
+<form>
+    <label for="pole"></label>
+    <input type="text" id="pole">
+    <label for="text"></label>
+    <textarea id="text" cols="20" rows="30"></textarea>
+    <button type="submit">wyślij</button>
+</form>
+
+
+
 <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var textF = document.querySelector('#pole');
+        var textA = document.querySelector('#text');
+
+        textF.addEventListener('keydown', function (e) {
+            textA.value+='wciśnięto klawisz ' + String.fromCharCode(e.keyCode)+',';
+        });
+    });
 
 /*
     var btn = document.querySelector('.btn');
     console.log(btn.tagName);
     */
 
-
+var pp1 = document.querySelector(".PP1");
+var hh1 = document.querySelector(".HH1");
 
     var btn = document.querySelector(".button");
 
     btn.addEventListener("click", function() {
 
-        var pp1 = document.querySelector(".PP1");
-        var hh1 = document.querySelector(".HH1");
+        hh1.classList.remove("czarna");
+        pp1.classList.remove("czarna");
 
-        hh1.style.color = 'black';
-        pp1.style.color = 'black';
-        pp1.style.fontSize = '10px';
-
+        hh1.classList.add("niebieska");
+        pp1.classList.add("niebieska");
 
     });
+
 
     var btn2 = document.querySelector(".btn");
 
@@ -68,9 +105,11 @@ btn2.addEventListener("click", function() {
     var pp1 = document.querySelector(".PP1");
     var hh1 = document.querySelector(".HH1");
 
-    hh1.style.color = 'blue';
-    pp1.style.color = 'blue';
-    pp1.style.fontSize = '30px';
+    hh1.classList.remove("niebieska");
+    hh1.classList.add('czarna');
+    pp1.classList.remove('niebieska');
+    pp1.classList.add('czarna');
+
 });
 
 /*
