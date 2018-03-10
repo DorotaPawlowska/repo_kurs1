@@ -86,10 +86,10 @@ czarny
 
     <fieldset >
         <legend >Wybierz dwa (2) ulubione owoce</legend>
-        <input type="checkbox" id="someCheckbox1" value="jagoda" name="color" checked/> niebieski
-        <input type="checkbox" id="someCheckbox2" value="jablko" name="color" /> czerwony
-        <input type="checkbox" id="someCheckbox3" value="arbuz" name="color" /> zielony
-        <input type="checkbox" id="someCheckbox4" value="pomarancz" name="color" /> pomarańcz
+        <input type="checkbox" class="someCheckbox" value="jagoda" name="color" /> niebieski
+        <input type="checkbox" class="someCheckbox" value="jablko" name="color" /> czerwony
+        <input type="checkbox" class="someCheckbox" value="arbuz" name="color" /> zielony
+        <input type="checkbox" class="someCheckbox" value="pomarancz" name="color" /> pomarańcz
     </fieldset>
 
     <div>
@@ -110,6 +110,24 @@ czarny
 
 <script>
 
+    document.addEventListener("DOMContentLoaded", function()
+    {
+        var czek = document.querySelectorAll('.someCheckbox');
+        for(i=0;i<czek.length;i++)
+        {
+            czek[i].addEventListener("click", function()
+            {
+                if (this.checked)
+                {
+                    alert(this.value);
+                }
+            });
+        }
+
+    });
+
+
+  /*
 document.addEventListener('DOMContentLoaded', function () {
 
     var chek1 = document.querySelector('#someCheckbox1')
