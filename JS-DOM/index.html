@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<button type="button" id="btn">
+    kliknij mnie
+</button>
+
+<table id="tabelka">
+    <tr>
+        <td>1</td>
+        <span>2</span>
+        <td class="czerwone">3</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <span>5</span>
+        <td class="czerwone">6</td>
+    </tr>
+</table>
+
+
+<script>
+
+
+
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+    var tab = document.getElementById('tabelka');
+    var td = tab.getElementsByTagName('td');
+
+        console.log(td.length);
+
+        for(var i = 0; i < td.length; i++ ){
+            td[i].style.backgroundColor = 'red';
+        }
+
+//        var btn = document.getElementById('btn');
+//        console.log(btn.innerText);
+
+
+    });
+</script>
+
+</body>
+</html>
