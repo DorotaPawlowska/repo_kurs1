@@ -1,74 +1,14 @@
-console.log("hej");
-
-var heroesList = [
-    {
-        name: "Thor",
-        price: 5000,
-        img: 'thor.jpg',
-        desc: 'lorem ipsum.....'
-    },
-    {
-        name: "Superman",
-        price: 7000,
-        img: 'superman.jpg',
-        desc: 'lorem ipsum.....'
-    },
-    {
-        name: "Batman",
-        price: 3000,
-        img: 'batman.jpg',
-        desc: 'lorem ipsum.....'
-    },
-    {
-        name: "Hulk",
-        price: 4000,
-        img: 'hulk.jpg',
-        desc: 'lorem ipsum.....'
-    },
-    {
-        name: "Ironman",
-        price: 9000,
-        img: 'ironman.jpg',
-        desc: 'lorem ipsum.....'
-    },
-    {
-        name: "Harry Potter",
-        price: 6000,
-        img: 'potter.jpg',
-        desc: 'lorem ipsum.....'
-    }
-];
-
-var heroesListRegion = document.getElementById('heroesList-region');
-
-heroesList.forEach(function (hero) {
-    var element = document.createElement('div');
-    var template = ''
-        + '<div class="hero-item">'
-        + ' <div>'
-        + '     <img src="images/heroes/'+ hero.img +'" alt="' + hero.name + '">'
-        + ' </div>'
-        + ' <div>'
-        + '     <span>'+ hero.name +'</span>'
-        + '     <span>'+ hero.price +' zł/h</span>'
-        + ' </div>'
-        + '</div>';
-
-    element.innerHTML = template;
-    heroesListRegion.appendChild(element);
-});
-
 var addHeroButton = document.getElementById('addHero');
 
 addHeroButton.addEventListener('click', function (event) {
     event.preventDefault();
 
-
+    clearRegions();
 
     var addHeroRegion = document.getElementById('addHero-region'),
         addHeroTemplate = ''
             + '<div class="form-container">'
-            + ' <form>'
+            + ' <form id="formHero">'
             + '     <h1>Dodaj Herosa</h1>'
             + '     <div class="form-group">'
             + '         <input type="text" name="name" />'
@@ -88,7 +28,7 @@ addHeroButton.addEventListener('click', function (event) {
             + '     </div>'
             + ' </form>'
             + ' <div class="button-container">'
-            + '     <button class="button" type="button"><span>Submit</span></button>'
+            + '     <button class="button" type="button" id="subButton"><span>Submit</span></button>'
             + ' </div>'
             + '</div>';
 
@@ -97,4 +37,15 @@ addHeroButton.addEventListener('click', function (event) {
     HTMLelement.innerHTML = addHeroTemplate;
     addHeroRegion.appendChild(HTMLelement);
 
+    var submitHeroButton = document.getElementById('subButton');
+
+    submitHeroButton.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var heroForm = document.forms['formHero'],
+            heroData = prepaerDataHero(heroForm);
+
+        addHero(heroData)
+
+    })
 })
