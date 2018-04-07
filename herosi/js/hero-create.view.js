@@ -1,8 +1,5 @@
-var addHeroButton = document.getElementById('addHero');
-
-addHeroButton.addEventListener('click', function (event) {
+function showHeroCreateView(event) {
     event.preventDefault();
-
     clearRegions();
 
     var addHeroRegion = document.getElementById('addHero-region'),
@@ -32,20 +29,21 @@ addHeroButton.addEventListener('click', function (event) {
             + ' </div>'
             + '</div>';
 
-    var HTMLelement = document.createElement('div');
+        var HTMLelement = document.createElement('div');
 
-    HTMLelement.innerHTML = addHeroTemplate;
-    addHeroRegion.appendChild(HTMLelement);
+        HTMLelement.innerHTML = addHeroTemplate;
+        addHeroRegion.appendChild(HTMLelement);
 
-    var submitHeroButton = document.getElementById('subButton');
+        var submitHeroButton = document.getElementById('subButton');
 
-    submitHeroButton.addEventListener('click', function (event) {
-        event.preventDefault();
+        submitHeroButton.addEventListener('click', function (event) {
+            event.preventDefault();
 
-        var heroForm = document.forms['formHero'],
-            heroData = prepaerDataHero(heroForm);
+            var heroForm = document.forms['formHero'],
+                heroData = prepaerDataHero(heroForm);
 
-        addHero(heroData)
-
-    })
-})
+            addHero(heroData);
+            clearRegions();
+            showHeroListView();
+        })
+}

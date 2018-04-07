@@ -1,4 +1,5 @@
-console.log("hej");
+attachMenuListeners();
+showHeroListView();
 
 function clearRegions() {
     var regions = [
