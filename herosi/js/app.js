@@ -1,3 +1,5 @@
+loadFromLocalStorage();
+
 attachMenuListeners();
 showHeroListView();
 
