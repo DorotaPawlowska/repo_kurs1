@@ -29,16 +29,15 @@ function removeHeros(event) {
         deleteHeroButton.addEventListener('click', function (event) {
         event.preventDefault();
 
-        //
-        // var heroDeleteForm = document.forms['formDelete'],
-        //     heroData = prepaerDataHero(heroDeleteForm);
-        //
-        // addHero(heroData);
+        var heroDeleteForm = document.forms['formDelete'].hero.name;
+        removeHeros(heroDeleteForm);
         // clearRegions();
         // showHeroListView();
     })
 
 }
+
+
 
 function optionString() {
     var text = '';

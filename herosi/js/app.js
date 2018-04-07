@@ -6,7 +6,8 @@ showHeroListView();
 function clearRegions() {
     var regions = [
         'addHero-region',
-        'heroesList-region'
+        'heroesList-region',
+        'removeHero-region',
     ];
 
     regions.forEach(function (t) {

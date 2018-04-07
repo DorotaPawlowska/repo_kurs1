@@ -17,6 +17,21 @@ function addHero(hero) {
     saveToLocalStorage();
 }
 
+function deleteHero(hero) {
+    var list = [];
+    heroesList.forEach(function (hero) {
+        if(heroName !== hero.name){
+            list.push(hero);
+        }
+    });
+
+    heroesList = list;
+
+    saveToLocalStorage();
+    clearRegions();
+    showHeroListView();
+}
+
 function loadMockHeroes() {
     var mockHeroesList = [
         {
