@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP - js01</title>
+</head>
+<body>
+
+    <script>
+        // hej ho, hej ho, kodować by się chciało..!! :)
+
+        var auto = {
+            producent: 'Ford',
+            model: 'f150',
+            cenaNetto: 140000,//wszędzie ma być zatem taka nazwa tej zmiennej
+            predkoscMax: 170,
+            obliczCeneBrutto: function (vat) {
+                return this.cenaNetto*(1+vat);
+            }
+
+        };
+
+        var autoCintroen = {
+            producent: 'Citroen',
+            model: 'Picasso',
+            cenaNetto: 85000//tutaj -> wszędzie ma być zatem taka nazwa tej zmiennej
+        };
+
+        var autoDacia = {
+            cenaNetto: 45000//i tutaj też -> wszędzie ma być zatem taka nazwa tej zmiennej
+        };
+
+        var cenaDomyslnaAuta = auto.obliczCeneBrutto(.23);
+        var cenaDomyslnaAutaCitroen = auto.obliczCeneBrutto.call(autoCintroen,.23);
+        var cenaDomyslnaAutaDacia = auto.obliczCeneBrutto.call(autoDacia, .23);
+
+        console.log(auto.producent + ' ' + auto.model + ' kosztuje: '+cenaDomyslnaAuta+'zł');
+        console.log(autoCintroen.producent + ' ' + autoCintroen.model + ' kosztuje: '+cenaDomyslnaAutaCitroen+'zł');
+        console.log('Dacia kosztuje: '+cenaDomyslnaAutaDacia+'zł');
+    </script>
+</body>
+</html>
