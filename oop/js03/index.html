@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP - js03</title>
+</head>
+<body>
+    <script>
+        /**
+         *  Products:
+         *  |----+------------+-------+--------+--------|
+         *  | id | name       | price | type   | weight |
+         *  |----+------------+-------+--------+--------|
+         *  |  1 | Watermelon | 25.90 | fruit  |   4500 |
+         *  |  2 | Cheese     | 23.90 | dairy  |   1000 |
+         *  |  3 | Bread      |  4.00 | bakery |    500 |
+         *  |  4 | fish       | 22.80 | fish   |   1000 |
+         *  |  5 | coffee     | 18.90 | coffee |    200 |
+         *  |----+------------+-------+--------+--------|
+         *
+         *  Please add to you shopping cart:
+         *     - 1500g of Watermelon
+         *     - 200g of cheese
+         *     - 2 bread
+         *     - 600g of fish
+         *     - 2 coffees
+         */
+
+    function Product(id, name, price, type, weight) {
+
+        var _name = name;
+
+        return {
+            id: id,
+            name: name,
+            price: price,
+            type: type,
+            weight: weight,
+            unitPrice: price/weight
+        }
+    }
+
+    function Basket(){
+        var _tabela = [];
+
+        return{
+            addProduct: function (product, amount) {
+
+                _tabela.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    type: product.type,
+                    weight: amount,
+                    unitPrice: product.unitPrice
+                });
+            },
+            show:function () {
+                return _tabela;
+            },
+            getTotalPrice: function (amount) {
+                var totalPrice = 0;
+
+                _tabela.forEach(function (t) {
+                    totalPrice += t.price*t.unitPrice;
+                })
+                return totalPrice;
+            },
+            doIHaveEnoughMoney: function (mam) {
+                if(this.getTotalPrice() <= mam){
+                    console.log(' 0000 ');
+                }else{
+                    console.log(' 9999 ');
+                }
+            }
+        }
+    }
+
+    var Watermelon = new Product(1,'Watermelon',25.90,'fruit',4500);
+    var Cheese = new Product(2,'Cheese',23.90,'dairy', 1000);
+    var Bread = new Product(3,'Bread',4.00,'bakery', 500);
+    var Fish = new Product(4,'Fish',22.80,'fish', 1000);
+    var Coffee = new Product(1,'Coffee',18.90,'coffee',200);
+
+    var Koszyk = new Basket;
+
+    Koszyk.addProduct(Watermelon, 1500);
+    Koszyk.addProduct(Cheese,200);
+    Koszyk.addProduct(Bread,2);
+
+    console.log(Koszyk);
+    console.log(Koszyk.show());
+    console.log(Koszyk.doIHaveEnoughMoney(80));
+
+    </script>
+</body>
+</html>
