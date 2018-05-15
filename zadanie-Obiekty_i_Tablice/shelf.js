@@ -7,7 +7,7 @@ let shelf = {
       books: [
         { title: 'Hitchickers Guide to Galaxy', year: 1979 },
         { title: 'Restaurant at the end of Galaxy', year: 1980 },
-        { title: 'Life, the Universe and Everything Else', year: 1982 },
+        { title: 'Life, the Universe and Everything Else', year: 1982 }
       ]
     },
     {
@@ -16,10 +16,10 @@ let shelf = {
       books: [
         { title: 'Nomów księga wyjścia', year: 1989 },
         { title: 'Nomów księga kopania', year: 1990 },
-        { title: 'Nomów księga odlotu', year: 1990 },
+        { title: 'Nomów księga odlotu', year: 1990 }
       ]
     }
   ]
-}
+};
 
 
