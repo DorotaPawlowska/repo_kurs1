@@ -15,6 +15,8 @@ function showNewNoteForm () {
 
 document.querySelector("#pen").addEventListener( 'click', showNewNoteForm );
 
+
+
 function submitNewNoteForm ( ) {
   var text = document.querySelector('#new-note-text').value;
   document.querySelector('#new-note-text').value = "";

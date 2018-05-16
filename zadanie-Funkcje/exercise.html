@@ -31,7 +31,11 @@
   3. Doda karteczkę do tablicy
   **/
 
-
+  function createNewNote(text="notatka domyślna"){
+      let note = getNote();
+      note.innerHTML = text;
+      addNoteToBoard(note);
+  }
 
   </script>  
   <script src="notes.js"></script>
