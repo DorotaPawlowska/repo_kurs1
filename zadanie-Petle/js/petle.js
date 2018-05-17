@@ -69,14 +69,11 @@ var reverseArray = function(){
         kopia[j] = tablica[i];
     }
 
-    // for(let i = 0; i < tablica.length; i++){
     alert(tablica);
     alert(kopia);
-    // }
 };
 
 reverseArray();
-
 
 // 5.
 // ** Za pomocą pętli policz silnię z dowolnej, 
@@ -85,6 +82,15 @@ reverseArray();
 
 var factorial = function(number){
   // TODO
+    let silnia = 1;
+    if(number === 0){
+        return silnia;
+    }else {
+        for(let n = 1; n <= number; n++){
+            silnia = silnia * n;
+        }
+        return silnia;
+    }
 };
 
 // 6.
