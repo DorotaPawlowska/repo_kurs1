@@ -16,10 +16,15 @@
 // Stwórz tablicę złożoną z 10 elementów i wyświetl je w konsoli po kolei
 // 
 
+let tab = [1,2,3,4,5,6,7,8,9,10];
+
 var show = function(){
   // TODO
-}
-// show();
+    for(let i = 0; i < 10; i++){
+        console.log(tab[i]);
+    }
+};
+show();
 
 // 2.
 // Wyświetl w konsoli liczby parzyste od 0 do 100
@@ -27,8 +32,13 @@ var show = function(){
 
 var even = function () {
   // TODO
-}
-// even();
+    for(let i = 0; i <= 100; i++){
+        if((i%2) === 0) {
+            console.log(i);
+        }
+    }
+};
+even();
 
 
 // 3.
@@ -37,8 +47,11 @@ var even = function () {
 
 var hundred = function(){
   // TODO
-}
-// hundred();
+    for(let i = 100; i > 0; i--){
+        console.log(i);
+    }
+};
+hundred();
 
 // 4.
 // Stwórz tablicę, a następnie 
