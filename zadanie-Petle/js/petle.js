@@ -58,11 +58,24 @@ hundred();
 // przy pomocą pętli stwórz tablicę zawierającą 
 // te same elementy w odwrotnej kolejności. 
 // Wyświetl je w alercie. 
-// 
+//
+
+let tablica = [9,7,5,3,1];
+let kopia = [];
 
 var reverseArray = function(){
   // TODO
-}
+    for (let i = 0, j = tablica.length; i < tablica.length, j >= 0; i++, j--){
+        kopia[j] = tablica[i];
+    }
+
+    // for(let i = 0; i < tablica.length; i++){
+    alert(tablica);
+    alert(kopia);
+    // }
+};
+
+reverseArray();
 
 
 // 5.
@@ -72,7 +85,7 @@ var reverseArray = function(){
 
 var factorial = function(number){
   // TODO
-}
+};
 
 // 6.
 // Stwórz obiekt i wyświetl na stronie wszystkie jego elementy 
