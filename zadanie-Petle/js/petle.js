@@ -178,15 +178,28 @@ var showObjectArray = function(){
 showObjectArray();
 
 // 8.
+
 // Stwórz tablicę złożoną z 10 kolejnych wielokrotności 
 // liczby 5 za pomocą pętli while
 // 
 
 var multipleOf5 = function(){
   // TODO
-}
+
+    let i = 0;
+    let tab = [];
+    while(i < 10){
+        i++;
+        tab[i-1] = i * 5;
+        console.log(" wartość tablicy w indeksie: " + (i-1) + " wynosi " + tab[i-1]);
+    }
+    // alert(tab);
+};
+
+multipleOf5();
 
 // 9.
+
 // Wyświetl w konsoli liczby parzyste od 0 do 100 
 // za pomocą pętli while
 // 
