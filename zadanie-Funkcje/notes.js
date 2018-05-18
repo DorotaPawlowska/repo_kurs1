@@ -1,6 +1,6 @@
 
 function getNote() {
-  let element = document.createElement( 'div' );
+  var element = document.createElement( 'div' );
   element.classList.add( 'note' );  
   return element;
 }

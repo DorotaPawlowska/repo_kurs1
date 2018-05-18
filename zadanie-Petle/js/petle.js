@@ -193,7 +193,6 @@ var multipleOf5 = function(){
         tab[i-1] = i * 5;
         console.log(" wartość tablicy w indeksie: " + (i-1) + " wynosi " + tab[i-1]);
     }
-    // alert(tab);
 };
 
 multipleOf5();
@@ -203,12 +202,25 @@ multipleOf5();
 // Wyświetl w konsoli liczby parzyste od 0 do 100 
 // za pomocą pętli while
 // 
+console.log(" ================ pętla while ===============");
 
 var evenNumbers = function(){
   // TODO
-}
+
+    let i = 0;
+
+    while(i <=100){
+        if((i%2) === 0) {
+            console.log(i);
+        }
+        i++;
+    }
+};
+
+evenNumbers();
 
 // 10.
+
 // Pobieraj od użytkownika liczby tak długo, 
 // aż wpiszę liczbę większą niż 50. 
 // Wtedy wyświetl tablicę złożoną z wpisanych 
