@@ -13,6 +13,7 @@
 
 
 // 1.
+
 // Stwórz tablicę złożoną z 10 elementów i wyświetl je w konsoli po kolei
 // 
 
@@ -27,6 +28,7 @@ var show = function(){
 show();
 
 // 2.
+
 // Wyświetl w konsoli liczby parzyste od 0 do 100
 // 
 
@@ -42,6 +44,7 @@ even();
 
 
 // 3.
+
 // Wyświetl w konsoli liczby od 100 do 1
 // 
 
@@ -54,6 +57,7 @@ var hundred = function(){
 hundred();
 
 // 4.
+
 // Stwórz tablicę, a następnie 
 // przy pomocą pętli stwórz tablicę zawierającą 
 // te same elementy w odwrotnej kolejności. 
@@ -76,6 +80,7 @@ var reverseArray = function(){
 reverseArray();
 
 // 5.
+
 // ** Za pomocą pętli policz silnię z dowolnej, 
 // podanej liczby 
 //
@@ -94,6 +99,7 @@ var factorial = function(number){
 };
 
 // 6.
+
 // Stwórz obiekt i wyświetl na stronie wszystkie jego elementy 
 // w formacie: "(klucz) wynosi (wartość)". 
 // Funkcji nie wywołuj w konsoli
@@ -124,6 +130,7 @@ var showObject = function(){
 showObject();
 
 // 7.
+
 // stwórz tablicę zawierającą 3 obiekty. 
 // Wyświetl na stronie wszystkie elementy 
 // wszystkich obiektów, zaznaczając którego obiektu 
@@ -131,9 +138,44 @@ showObject();
 // Funkcji nie wywołuj w konsoli
 //
 
+let MyTab = [
+    {
+       imie: "jola",
+       nazwisko: "nowak",
+       wiek: 21
+    },
+    {
+        pierwszy: "jeden",
+        drugi: "dwa",
+        trzeci: "trzy",
+        czwarty: "cztery"
+    },
+    {
+        name: "Dorota",
+        surname: "Kowalska",
+        age: 23,
+        city: "Szczecin",
+        year: 2008
+    }];
+
 var showObjectArray = function(){
   // TODO
+
+    let eleme = document.createElement('div');
+    let template = '';
+
+    for(let i = 0; i < MyTab.length; i++){
+        for( var prop in MyTab[i]){
+            template += '<p>' + ' obiekt na pozycji nr: ' + i + ' w tablicy -> klucz: ' + prop + ' -> wynosi: ' + MyTab[i][prop] + '</p>'
+        }
+    }
+
+    eleme.innerHTML = template;
+    document.getElementById('dane2').appendChild(eleme);
+
 };
+
+showObjectArray();
 
 // 8.
 // Stwórz tablicę złożoną z 10 kolejnych wielokrotności 
