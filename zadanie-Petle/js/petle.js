@@ -69,8 +69,8 @@ var reverseArray = function(){
         kopia[j] = tablica[i];
     }
 
-    alert(tablica);
-    alert(kopia);
+    // alert(tablica);
+    // alert(kopia);
 };
 
 reverseArray();
@@ -99,9 +99,29 @@ var factorial = function(number){
 // Funkcji nie wywołuj w konsoli
 //
 
+var MyObject = {
+    name: "Dorota",
+    surname: "Kowalska",
+    age: 23,
+    city: "Szczecin",
+    year: 2008
+};
+
 var showObject = function(){
   // TODO
-}
+    let eleme = document.createElement('div');
+    let template = '';
+
+    for( var prop in MyObject){
+        template += '<p>' + 'klucz: ' + prop + ' -> wynosi: ' + MyObject[prop] + '</p>'
+    }
+
+    eleme.innerHTML = template;
+    document.getElementById('dane').appendChild(eleme);
+
+};
+
+showObject();
 
 // 7.
 // stwórz tablicę zawierającą 3 obiekty. 
@@ -113,7 +133,7 @@ var showObject = function(){
 
 var showObjectArray = function(){
   // TODO
-}
+};
 
 // 8.
 // Stwórz tablicę złożoną z 10 kolejnych wielokrotności 
