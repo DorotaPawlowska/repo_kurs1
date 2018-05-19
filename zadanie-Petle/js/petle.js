@@ -226,7 +226,6 @@ evenNumbers();
 // dotychczas liczb na stronie
 //
 
-
     let tabi = [];
 
 document.getElementById('wyslij').onclick = function arrayLessThen50() {
@@ -248,21 +247,38 @@ document.getElementById('wyslij').onclick = function arrayLessThen50() {
     }
 };
 
-var arrayLessThen50 = function(){
-  // TODO
-
-};
+// var arrayLessThen50 = function(){
+//   // TODO
+//
+// };
 
 // 11.
 
 // Wypisz na stronie elementy poniższej tablicy 
 // do elementu "stop" włącznie.
-// var myArray = ['uczę', 'się', 'programować', 'stop', 'lubię', 'to']
+var myArray = ['uczę', 'się', 'programować', 'stop', 'lubię', 'to'];
 //
 
 var stopArray = function(){
   // TODO
-}
+    let eleme = document.createElement('div');
+    let template = ' elementy tablicy:  ';
+
+    for(let i =0; i < myArray.length; i++){
+
+        if(myArray[i] === 'stop'){
+            template += '<span> ' + 'stop' + ',</span>';
+            break;
+        }else{
+            template += '<span> ' + myArray[i] + ',</span>';
+        }
+    }
+    eleme.innerHTML = template;
+    document.getElementById('dane4').appendChild(eleme);
+
+};
+
+stopArray();
 
 // 12.
 
