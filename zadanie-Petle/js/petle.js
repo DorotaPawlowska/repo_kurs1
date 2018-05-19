@@ -202,7 +202,6 @@ multipleOf5();
 // Wyświetl w konsoli liczby parzyste od 0 do 100 
 // za pomocą pętli while
 // 
-console.log(" ================ pętla while ===============");
 
 var evenNumbers = function(){
   // TODO
@@ -227,11 +226,35 @@ evenNumbers();
 // dotychczas liczb na stronie
 //
 
-var arrayLessThen50 = function(){    
+
+    let tabi = [];
+
+document.getElementById('wyslij').onclick = function arrayLessThen50() {
+
+    let input = document.querySelector('#tablica').value;
+    let eleme = document.createElement('div');
+    let template = 'tablica zwiera:  ';
+
+    if (input <= 50) {
+        input = document.querySelector('#tablica').value;
+        tabi.push(input);
+        input.value = 0;
+    } else {
+        for (let i = 0; i < tabi.length; i++) {
+            template += '<span> ' + tabi[i] + ',</span>'
+        }
+        eleme.innerHTML = template;
+        document.getElementById('dane3').appendChild(eleme);
+    }
+};
+
+var arrayLessThen50 = function(){
   // TODO
-}
+
+};
 
 // 11.
+
 // Wypisz na stronie elementy poniższej tablicy 
 // do elementu "stop" włącznie.
 // var myArray = ['uczę', 'się', 'programować', 'stop', 'lubię', 'to']
@@ -242,6 +265,7 @@ var stopArray = function(){
 }
 
 // 12.
+
 // Pobieraj od użytkownika liczby tak długo, 
 // ż wpiszę liczbę większą niż 50. 
 // Wtedy wyświetl tablicę złożoną z wpisanych 
@@ -253,6 +277,7 @@ var including50 = function(){
 }
 
 // 13.
+
 // Poproś użytkownika o wpisanie imienia i godziny. 
 // W alercie wyświetl użytkownikowi powitanie wraz z 
 // imieniem. Jeśli godzina wpisana przez użytkownika 
