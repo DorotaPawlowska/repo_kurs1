@@ -12,7 +12,7 @@
 */
 
 
-// 1.
+// 1. ===============================================================
 
 // Stwórz tablicę złożoną z 10 elementów i wyświetl je w konsoli po kolei
 // 
@@ -27,7 +27,7 @@ var show = function(){
 };
 show();
 
-// 2.
+// 2. ===============================================================
 
 // Wyświetl w konsoli liczby parzyste od 0 do 100
 // 
@@ -56,7 +56,7 @@ var hundred = function(){
 };
 hundred();
 
-// 4.
+// 4. ===============================================================
 
 // Stwórz tablicę, a następnie 
 // przy pomocą pętli stwórz tablicę zawierającą 
@@ -79,7 +79,7 @@ var reverseArray = function(){
 
 reverseArray();
 
-// 5.
+// 5. ===============================================================
 
 // ** Za pomocą pętli policz silnię z dowolnej, 
 // podanej liczby 
@@ -98,7 +98,7 @@ var factorial = function(number){
     }
 };
 
-// 6.
+// 6. ===============================================================
 
 // Stwórz obiekt i wyświetl na stronie wszystkie jego elementy 
 // w formacie: "(klucz) wynosi (wartość)". 
@@ -129,7 +129,7 @@ var showObject = function(){
 
 showObject();
 
-// 7.
+// 7. ===============================================================
 
 // stwórz tablicę zawierającą 3 obiekty. 
 // Wyświetl na stronie wszystkie elementy 
@@ -177,7 +177,7 @@ var showObjectArray = function(){
 
 showObjectArray();
 
-// 8.
+// 8. ===============================================================
 
 // Stwórz tablicę złożoną z 10 kolejnych wielokrotności 
 // liczby 5 za pomocą pętli while
@@ -197,7 +197,7 @@ var multipleOf5 = function(){
 
 multipleOf5();
 
-// 9.
+// 9. ===============================================================
 
 // Wyświetl w konsoli liczby parzyste od 0 do 100 
 // za pomocą pętli while
@@ -218,7 +218,7 @@ var evenNumbers = function(){
 
 evenNumbers();
 
-// 10.
+// 10. ===============================================================
 
 // Pobieraj od użytkownika liczby tak długo, 
 // aż wpiszę liczbę większą niż 50. 
@@ -235,9 +235,7 @@ document.getElementById('wyslij').onclick = function arrayLessThen50() {
     let template = 'tablica zwiera:  ';
 
     if (input <= 50) {
-        input = document.querySelector('#tablica').value;
         tabi.push(input);
-        input.value = 0;
     } else {
         for (let i = 0; i < tabi.length; i++) {
             template += '<span> ' + tabi[i] + ',</span>'
@@ -252,7 +250,7 @@ document.getElementById('wyslij').onclick = function arrayLessThen50() {
 //
 // };
 
-// 11.
+// 11. ===============================================================
 
 // Wypisz na stronie elementy poniższej tablicy 
 // do elementu "stop" włącznie.
@@ -280,19 +278,44 @@ var stopArray = function(){
 
 stopArray();
 
-// 12.
+// 12. ====================================================================
 
 // Pobieraj od użytkownika liczby tak długo, 
-// ż wpiszę liczbę większą niż 50. 
+// aż wpiszę liczbę większą niż 50.
 // Wtedy wyświetl tablicę złożoną z wpisanych 
 // dotychczas liczb na stronie z ostatnią włącznie
 // 
+let tabi2 = [];
+let licznik = 0;
 
-var including50 = function(){
-  // TODO
-}
+document.getElementById('wyslij2').onclick = function including50() {
 
-// 13.
+    let input = document.querySelector('#tablica2').value;
+    let eleme = document.createElement('div');
+    let template = 'tablica zwiera:  ';
+
+    if (input <= 50) {
+
+        tabi2.push(input);
+        licznik = licznik + 1;
+
+    } else if( input > 50 && licznik === tabi2.length){
+
+        tabi2.push(input);
+        for (let i = 0; i < tabi2.length; i++) {
+            template += '<span> ' + tabi2[i] + ',</span>'
+        }
+        eleme.innerHTML = template;
+        document.getElementById('dane5').appendChild(eleme);
+    }
+};
+
+// var including50 = function(){
+//   // TODO
+//
+// }
+
+// 13. =======================================================================
 
 // Poproś użytkownika o wpisanie imienia i godziny. 
 // W alercie wyświetl użytkownikowi powitanie wraz z 
@@ -302,6 +325,8 @@ var including50 = function(){
 // od 18 do północy "Dobry wieczór", 
 // a od północy do 6 "idź spać!!!"
 //
+
+
 
 var nameAndHour = function(){
   // TODO
