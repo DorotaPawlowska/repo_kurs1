@@ -326,9 +326,26 @@ document.getElementById('wyslij2').onclick = function including50() {
 // a od północy do 6 "idź spać!!!"
 //
 
+document.getElementById('powitanie').onclick = function nameAndHour() {
+    let imie = document.querySelector('#imie').value;
+    let godzina = document.querySelector('#godzina').value;
+    let text = '';
+
+    if (godzina > "06:00" && godzina <= "12:00"){
+        text = "Dzień dobry " + imie + "!";
+    }else if (godzina > "12:00" && godzina <= "18:00"){
+        text = "Jak mija dzień " + imie + "!";
+    }else if (godzina > "18:00" && godzina <= "24:00"){
+        text = "Dobry wieczór " + imie + "!";
+    }else {
+        text = "Idź spać " + imie + "!";
+    }
+
+    alert(text);
+};
 
 
-var nameAndHour = function(){
-  // TODO
-}
+// var nameAndHour = function(){
+//   // TODO
+// }
 
