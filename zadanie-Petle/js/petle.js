@@ -179,7 +179,7 @@ var showObjectArray = function(){
 
 showObjectArray();
 
-// 8. ===============================================================
+// 8. ============================ popr ===================================
 
 // Stwórz tablicę złożoną z 10 kolejnych wielokrotności 
 // liczby 5 za pomocą pętli while
@@ -191,15 +191,15 @@ var multipleOf5 = function(){
     let i = 0;
     let tab = [];
     while(i < 10){
+        tab[i] = (i+1) * 5;
+        console.log(" wartość tablicy w indeksie: " + (i) + " wynosi " + tab[i]);
         i++;
-        tab[i-1] = i * 5;
-        console.log(" wartość tablicy w indeksie: " + (i-1) + " wynosi " + tab[i-1]);
     }
 };
 
 multipleOf5();
 
-// 9. ===============================================================
+// 9. ============================= popr ==================================
 
 // Wyświetl w konsoli liczby parzyste od 0 do 100 
 // za pomocą pętli while
@@ -211,16 +211,14 @@ var evenNumbers = function(){
     let i = 0;
 
     while(i <=100){
-        if((i%2) === 0) {
             console.log(i);
-        }
-        i++;
+        i+= 2;
     }
 };
 
 evenNumbers();
 
-// 10. ===============================================================
+// 10. ========================= chyba OK ======================================
 
 // Pobieraj od użytkownika liczby tak długo, 
 // aż wpiszę liczbę większą niż 50. 
@@ -252,7 +250,7 @@ document.getElementById('wyslij').onclick = function arrayLessThen50() {
 //
 // };
 
-// 11. ===============================================================
+// 11. ===================== popr ==========================================
 
 // Wypisz na stronie elementy poniższej tablicy 
 // do elementu "stop" włącznie.
@@ -263,15 +261,16 @@ var stopArray = function(){
   // TODO
     let eleme = document.createElement('div');
     let template = ' elementy tablicy:  ';
-
-    for(let i =0; i < myArray.length; i++){
+    let i =0;
+    while( i < myArray.length){
 
         if(myArray[i] === 'stop'){
             template += '<span> ' + 'stop' + ',</span>';
-            break;
+            break; // a czy break jest użyte poprawnie czy raczej należy tego unikać ?
         }else{
             template += '<span> ' + myArray[i] + ',</span>';
         }
+        i++;
     }
     eleme.innerHTML = template;
     document.getElementById('dane4').appendChild(eleme);
