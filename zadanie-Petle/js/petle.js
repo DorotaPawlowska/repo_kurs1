@@ -12,7 +12,7 @@
 */
 
 
-// 1. ===============================================================
+// 1. =========================== popr ====================================
 
 // Stwórz tablicę złożoną z 10 elementów i wyświetl je w konsoli po kolei
 // 
@@ -21,29 +21,27 @@ let tab = [1,2,3,4,5,6,7,8,9,10];
 
 var show = function(){
   // TODO
-    for(let i = 0; i < 10; i++){
+    for(let i = 0; i < tab.length; i++){
         console.log(tab[i]);
     }
 };
 show();
 
-// 2. ===============================================================
+// 2. ============================ popr ===================================
 
 // Wyświetl w konsoli liczby parzyste od 0 do 100
 // 
 
 var even = function () {
   // TODO
-    for(let i = 0; i <= 100; i++){
-        if((i%2) === 0) {
+    for(let i = 0; i <= 100; i+=2){
             console.log(i);
-        }
     }
 };
 even();
 
 
-// 3.
+// 3. ============================= OK ===================================
 
 // Wyświetl w konsoli liczby od 100 do 1
 // 
@@ -56,7 +54,7 @@ var hundred = function(){
 };
 hundred();
 
-// 4. ===============================================================
+// 4. ======================== popr =======================================
 
 // Stwórz tablicę, a następnie 
 // przy pomocą pętli stwórz tablicę zawierającą 
@@ -69,17 +67,21 @@ let kopia = [];
 
 var reverseArray = function(){
   // TODO
-    for (let i = 0, j = tablica.length; i < tablica.length, j >= 0; i++, j--){
-        kopia[j] = tablica[i];
+  //   for (let i = 0, j = tablica.length; i < tablica.length, j >= 0; i++, j--){
+  //       kopia[j] = tablica[i];
+  //   }
+
+    for (let i = tablica.length; i >= 0; i--){
+        kopia.push(tablica[i]);
     }
 
-    // alert(tablica);
-    // alert(kopia);
+    alert(tablica);
+    alert(kopia);
 };
 
 reverseArray();
 
-// 5. ===============================================================
+// 5. ============================ OK ===================================
 
 // ** Za pomocą pętli policz silnię z dowolnej, 
 // podanej liczby 
@@ -98,7 +100,7 @@ var factorial = function(number){
     }
 };
 
-// 6. ===============================================================
+// 6. ============================= OK ==================================
 
 // Stwórz obiekt i wyświetl na stronie wszystkie jego elementy 
 // w formacie: "(klucz) wynosi (wartość)". 
@@ -129,7 +131,7 @@ var showObject = function(){
 
 showObject();
 
-// 7. ===============================================================
+// 7. ============================= OK ==================================
 
 // stwórz tablicę zawierającą 3 obiekty. 
 // Wyświetl na stronie wszystkie elementy 
