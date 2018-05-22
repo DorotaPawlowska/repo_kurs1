@@ -75,8 +75,8 @@ var reverseArray = function(){
         kopia.push(tablica[i]);
     }
 
-    alert(tablica);
-    alert(kopia);
+    // alert(tablica);
+    // alert(kopia);
 };
 
 reverseArray();
@@ -295,6 +295,7 @@ document.getElementById('wyslij2').onclick = function including50() {
     let eleme = document.createElement('div');
     let template = 'tablica zwiera:  ';
 
+    /*
     if (input <= 50) {
 
         tabi2.push(input);
@@ -309,6 +310,8 @@ document.getElementById('wyslij2').onclick = function including50() {
         eleme.innerHTML = template;
         document.getElementById('dane5').appendChild(eleme);
     }
+    */
+
 };
 
 // var including50 = function(){
@@ -316,7 +319,7 @@ document.getElementById('wyslij2').onclick = function including50() {
 //
 // }
 
-// 13. =======================================================================
+// 13. =========================== popr ========================================
 
 // Poproś użytkownika o wpisanie imienia i godziny. 
 // W alercie wyświetl użytkownikowi powitanie wraz z 
@@ -332,16 +335,20 @@ document.getElementById('powitanie').onclick = function nameAndHour() {
     let godzina = document.querySelector('#godzina').value;
     let text = '';
 
-    if (godzina > "06:00" && godzina <= "12:00"){
-        text = "Dzień dobry " + imie + "!";
-    }else if (godzina > "12:00" && godzina <= "18:00"){
-        text = "Jak mija dzień " + imie + "!";
-    }else if (godzina > "18:00" && godzina <= "24:00"){
-        text = "Dobry wieczór " + imie + "!";
-    }else {
-        text = "Idź spać " + imie + "!";
+    switch(true){
+        case (godzina > "06:00" && godzina <= "12:00"):
+            text = "Dzień dobry " + imie + "!";
+            break;
+        case (godzina > "12:00" && godzina <= "18:00"):
+            text = "Jak mija dzień " + imie + "!";
+            break;
+        case (godzina > "18:00" && godzina <= "24:00"):
+            text = "Dobry wieczór " + imie + "!";
+            break;
+        case (godzina > "00:00" && godzina <= "06:00"):
+            text = "Idź spać " + imie + "!";
+            break;
     }
-
     alert(text);
 };
 
